@@ -2,9 +2,23 @@
 
 @layer base {
   body {
-    @apply bg-dots bg-white px-64;
+    @apply bg-white bg-dots;
   }
 }
 
 @tailwind components;
+@layer components {
+  .card {
+    @apply shade-small inline-flex items-center border-4 border-black p-4 transition-all duration-75 hover:-translate-y-1 hover:scale-110;
+  }
+}
 @tailwind utilities;
+
+@layer utilities {
+  .shade {
+    box-shadow: 10px 10px;
+  }
+  .shade-small {
+    box-shadow: 5px 5px;
+  }
+}

@@ -7,10 +7,10 @@ const pages = [
 ]
 </script>
 <template>
-  <div>
+  <div class="container mx-auto px-12">
     <header class="sticky top-0 flex flex-row">
       <!-- prettier-ignore -->
-      <div class="bg-dots flex h-12 basis-1/2 border-b-4 border-black selection:items-center">
+      <div class="bg-dots flex h-12 basis-1/2 border-b-4 border-black items-center">
         <h1 class="text-2xl font-black">Portfolio Website</h1>
       </div>
       <div class="grid h-12 basis-1/2 grid-cols-3 font-black">
@@ -25,6 +25,6 @@ const pages = [
         </NuxtLink>
       </div>
     </header>
-    <NuxtPage class="h-[1200px] border-4 border-t-0 border-black" />
+    <NuxtPage class="shade h-[400px] border-4 border-t-0 border-black" />
   </div>
 </template>
