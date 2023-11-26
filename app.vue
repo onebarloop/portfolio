@@ -8,7 +8,7 @@ const pages = [
 </script>
 <template>
   <div class="container mx-auto px-12">
-    <header class="sticky top-0 flex flex-row">
+    <header class="sticky top-0 z-20 flex flex-row">
       <!-- prettier-ignore -->
       <div class="bg-dots flex h-12 basis-1/2 border-b-4 border-black items-center">
         <h1 class="text-2xl font-black">Portfolio Website</h1>
@@ -25,6 +25,6 @@ const pages = [
         </NuxtLink>
       </div>
     </header>
-    <NuxtPage class="shade h-[400px] border-4 border-t-0 border-black" />
+    <NuxtPage class="shade border-4 border-t-0 border-black" />
   </div>
 </template>
