@@ -28,25 +28,15 @@ onMounted(() => {
 })
 </script>
 <template>
-  <section class="bg-purple-200 p-12">
+  <section class="bg-purple-200 p-4 sm:p-12">
     <div class="flex flex-col gap-12">
       <div class="card mx-auto bg-white font-bold">Index</div>
       <div class="grid grid-cols-2 gap-12">
         <div class="flex flex-col gap-24">
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
+          <div v-for="i in 10" :key="i" class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
         </div>
         <div class="flex flex-col gap-24 pt-24">
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
-          <div class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
+          <div v-for="i in 10" :key="i" class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
         </div>
       </div>
     </div>
