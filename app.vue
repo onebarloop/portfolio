@@ -2,7 +2,7 @@
 import { pages } from './config'
 </script>
 <template>
-  <div class="container mx-auto px-4 sm:px-12">
+  <div class="container mx-auto px-4 sm:px-12 xl:max-w-[1024px]">
     <header class="sticky top-0 z-20 flex flex-col gap-6 bg-dots sm:flex-row sm:gap-0">
       <div class="flex h-12 basis-1/2 items-center border-black sm:border-b-4">
         <h1 class="text-2xl font-black">Portfolio Website</h1>

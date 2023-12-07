@@ -1,4 +1,17 @@
 <script setup lang="ts">
+import { vita, type Vita } from '../config'
+
+const arrayL: Vita[] = []
+const arrayR: Vita[] = []
+
+for (let i = 0; i < vita.length; i++) {
+  if (!(i % 2)) {
+    arrayL.push(vita[i])
+  } else {
+    arrayR.push(vita[i])
+  }
+}
+
 onMounted(() => {
   const animation = document.querySelectorAll('.animation-left')
   const animationR = document.querySelectorAll('.animation-right')
@@ -31,12 +44,22 @@ onMounted(() => {
   <section class="bg-purple-200 p-4 sm:p-12">
     <div class="flex flex-col gap-12">
       <div class="card mx-auto bg-white font-bold">Index</div>
-      <div class="grid grid-cols-2 gap-12">
+      <div class="hidden grid-cols-2 gap-12 sm:grid">
         <div class="flex flex-col gap-24">
-          <div v-for="i in 10" :key="i" class="card animation-left mx-auto bg-white font-bold">Look what I have done in the past!</div>
+          <div v-for="point in arrayL" :key="point.id">
+            <VitaCard :date="point.date" :animation="'animation-left'" :text="point.text" />
+          </div>
         </div>
         <div class="flex flex-col gap-24 pt-24">
-          <div v-for="i in 10" :key="i" class="card animation-right mx-auto bg-white font-bold">Look what I have done in the past!</div>
+          <div v-for="point in arrayR" :key="point.id">
+            <VitaCard :date="point.date" :animation="'animation-right'" :text="point.text" />
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-24 sm:hidden">
+        <div v-for="(point, index) in vita" :key="point.id">
+          <VitaCard v-if="index % 2" :date="point.date" :animation="'animation-left'" :text="point.text" />
+          <VitaCard v-else :date="point.date" :animation="'animation-right'" :text="point.text" />
         </div>
       </div>
     </div>
