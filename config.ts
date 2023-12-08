@@ -36,11 +36,11 @@ type Vita = {
 }
 
 const techStack = [
-  { logo: '/img/logos/vue.svg', text: 'This is the backside', id: 1 },
-  { logo: '/img/logos/react.svg', text: 'This is the backside', id: 2 },
-  { logo: '/img/logos/js.svg', text: 'This is the backside', id: 3 },
-  { logo: '/img/logos/ts.svg', text: 'This is the backside', id: 4 },
-  { logo: '/img/logos/tailwind.svg', text: 'This is the backside', id: 5 }
+  { logo: '/img/logos/vue.svg', name: 'Vue JS', text: 'This is the backside', link: 'Link', id: 1 },
+  { logo: '/img/logos/react.svg', name: 'React', text: 'This is the backside', id: 2 },
+  { logo: '/img/logos/js.svg', name: 'JavaScript', text: 'This is the backside', id: 3 },
+  { logo: '/img/logos/ts.svg', name: 'TypeScript', text: 'This is the backside', id: 4 },
+  { logo: '/img/logos/tailwind.svg', name: 'Tailwind CSS', text: 'This is the backside', id: 5 }
 ]
 
 export { pages, vita, techStack, type Vita }
