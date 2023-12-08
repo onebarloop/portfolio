@@ -23,8 +23,8 @@ async function onSubmit(event: FormSubmitEvent<any>) {
     <div class="card mx-auto mb-8 bg-white">
       <p><span class="font-bold">Contact</span> <br /></p>
     </div>
-    <div class="grid grid-cols-2 gap-24">
-      <div class="">
+    <div class="grid grid-cols-1 gap-x-24 gap-y-12 md:grid-cols-2">
+      <div class="order-last md:order-first">
         <UForm :validate="validate" :state="state" @submit="onSubmit">
           <UFormGroup label="" name="text">
             <UTextarea placeholder="...feel free to send me a message" :rows="8" v-model="state.text" />
@@ -37,7 +37,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       <div class="flex flex-col gap-4">
         <a href="https://github.com/onebarloop" class="card flex flex-row gap-6 bg-fuchsia-200 hover:bg-fuchsia-300">
           <UIcon class="h-12 w-12" name="i-raphael-github" dynamic />
-          <div>github.com/onebarloop</div>
+          <div>github.com</div>
         </a>
         <a href="https://www.linkedin.com/in/alexander-bayer-21a59725b/" class="card flex flex-row gap-6 bg-yellow-200 hover:bg-yellow-300">
           <UIcon class="h-12 w-12" name="i-raphael-linkedin" dynamic />
