@@ -43,7 +43,7 @@ onMounted(() => {
 <template>
   <section class="bg-purple-200 p-4 sm:p-12">
     <div class="flex flex-col gap-12">
-      <div class="card mx-auto bg-white font-bold">Index</div>
+      <div class="card self-start bg-white font-bold">Index</div>
       <div class="hidden grid-cols-2 gap-12 sm:grid">
         <div class="flex flex-col gap-24">
           <div v-for="point in arrayL" :key="point.id">

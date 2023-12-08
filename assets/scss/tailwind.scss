@@ -1,58 +1,8 @@
 @tailwind base;
-
-@layer base {
-  body {
-    @apply overflow-hidden bg-white bg-dots bg-fixed pb-12;
-  }
-}
-
 @tailwind components;
-@layer components {
-  .card {
-    @apply shade-small inline-flex items-center border-4 border-black p-4  hover:-translate-y-1 hover:scale-110;
-  }
-}
 @tailwind utilities;
 
-@layer utilities {
-  .shade {
-    box-shadow: 10px 10px;
-  }
-  .shade-small {
-    box-shadow: 5px 5px;
-  }
-
-  .custom-scrollbar {
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-
-    // Scrollbar Ideas...
-
-    // &::-webkit-scrollbar-track {
-    //   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    // }
-    // &::-webkit-scrollbar-thumb {
-    //   background-color: darkgrey;
-    //   outline: 1px solid slategrey;
-    // }
-  }
-
-  .animation-left {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 0.3s ease-out;
-    // transition-delay: 0.1s;
-  }
-  .animation-right {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.3s ease-out;
-    // transition-delay: 0.1s;
-  }
-
-  .scroll-animation {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+@import './components/flipCards';
+@import './components/cards';
+@import './utilities/utilities';
+@import './base/base';
