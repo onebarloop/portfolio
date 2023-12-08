@@ -35,4 +35,12 @@ type Vita = {
   id: number
 }
 
-export { pages, vita, type Vita }
+const techStack = [
+  { logo: '/img/logos/vue.svg', text: 'This is the backside', id: 1 },
+  { logo: '/img/logos/react.svg', text: 'This is the backside', id: 2 },
+  { logo: '/img/logos/js.svg', text: 'This is the backside', id: 3 },
+  { logo: '/img/logos/ts.svg', text: 'This is the backside', id: 4 },
+  { logo: '/img/logos/tailwind.svg', text: 'This is the backside', id: 5 }
+]
+
+export { pages, vita, techStack, type Vita }
