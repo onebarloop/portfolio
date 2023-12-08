@@ -19,6 +19,6 @@ import { pages } from './config'
         </NuxtLink>
       </div>
     </header>
-    <NuxtPage class="shade border-4 border-t-0 border-black" />
+    <NuxtPage class="shade custom-scrollbar h-[79vh] overflow-x-hidden overflow-y-scroll border-4 border-t-0 border-black sm:h-[90vh]" />
   </div>
 </template>

@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-white bg-dots bg-fixed;
+    @apply overflow-hidden bg-white bg-dots bg-fixed pb-12;
   }
 }
 
@@ -21,6 +21,23 @@
   .shade-small {
     box-shadow: 5px 5px;
   }
+
+  .custom-scrollbar {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    // Scrollbar Ideas...
+
+    // &::-webkit-scrollbar-track {
+    //   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //   background-color: darkgrey;
+    //   outline: 1px solid slategrey;
+    // }
+  }
+
   .animation-left {
     opacity: 0;
     transform: translateX(-100px);
