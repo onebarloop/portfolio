@@ -25,6 +25,6 @@ async function mail(text: string) {
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  mail(body.text)
+  await mail(body.text)
   return { body }
 })
