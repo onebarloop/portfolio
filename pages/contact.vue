@@ -2,19 +2,24 @@
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
 const state = reactive({
-  text: undefined
+  text: undefined,
+  test: undefined
 })
 
 const validate = (state: any): FormError[] => {
   const errors = []
   if (!state.text) errors.push({ path: 'text', message: 'Required' })
+  if (state.test) errors.push({ path: 'test', message: 'Forbidden' })
   return errors
 }
 
-// eslint-disable-next-line require-await
 async function onSubmit(event: FormSubmitEvent<any>) {
-  // Do something with data
-  console.log(event.data)
+  const formData = event.data
+  const response = await $fetch('/api/mail', {
+    method: 'POST',
+    body: formData
+  })
+  console.log(response)
 }
 </script>
 
@@ -28,6 +33,9 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         <UForm :validate="validate" :state="state" @submit="onSubmit">
           <UFormGroup label="" name="text">
             <UTextarea placeholder="...feel free to send me a message" :rows="8" v-model="state.text" />
+          </UFormGroup>
+          <UFormGroup class="hidden" label="" name="test">
+            <UTextarea placeholder="...feel free to send me a message" :rows="8" v-model="state.test" />
           </UFormGroup>
           <div class="mt-4 flex justify-end">
             <UButton size="md" color="black" class="button rounded-none bg-white" type="submit"> Submit </UButton>
