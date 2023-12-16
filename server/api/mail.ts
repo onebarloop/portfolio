@@ -1,8 +1,8 @@
-import nodemailer from 'nodemailer'
+import { createTransport } from 'nodemailer'
 const { mailHost, mailUser, mailPassword, mailRecipient } = useRuntimeConfig()
 
 async function mail(text: string) {
-  const transporter = nodemailer.createTransport({
+  const transporter = createTransport({
     host: mailHost,
     port: 465,
     secure: true, // true for 465, false for other ports
