@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   runtimeConfig: {
-    mailHost: '',
-    mailPassword: '',
-    mailUser: '',
-    mailRecipient: ''
+    mailHost: process.env.NUXT_MAIL_HOST,
+    mailPassword: process.env.NUXT_MAIL_PASSWORD,
+    mailUser: process.env.NUXT_MAIL_USER,
+    mailRecipient: process.env.NUXT_MAIL_RECIPIENT
   }
 })
