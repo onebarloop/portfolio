@@ -41,7 +41,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <section class="bg-purple-200 p-4 sm:p-12">
+  <section class="bg-purple-200 p-4 pt-12 sm:p-12">
     <div class="flex flex-col gap-12">
       <div class="card flex flex-row gap-12 self-start bg-white">
         <p>
