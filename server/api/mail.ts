@@ -1,7 +1,7 @@
 import { createTransport } from 'nodemailer'
 const { mailHost, mailUser, mailPassword, mailRecipient } = useRuntimeConfig()
 
-async function mail(text: string) {
+async function mail(text: string, mail: string = 'Keine Angabe') {
   const transporter = createTransport({
     host: mailHost,
     port: 465,
@@ -15,7 +15,7 @@ async function mail(text: string) {
   const info = await transporter.sendMail({
     from: mailUser,
     to: mailRecipient,
-    subject: 'Test',
+    subject: `Portfolio Post von ${mail}`,
     text,
     html: `<p>${text}</p>`
   })
@@ -25,8 +25,9 @@ async function mail(text: string) {
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
+  console.log(body)
   try {
-    await mail(body.text)
+    await mail(body.text, body.mail)
     return 'success'
   } catch (error) {
     return 'error'

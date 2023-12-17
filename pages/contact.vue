@@ -2,9 +2,11 @@
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
 const info: Ref<'success' | 'error' | null> = ref(null)
+const loading: Ref<boolean> = ref(false)
 
 const state = reactive({
   text: undefined,
+  email: undefined,
   test: undefined
 })
 
@@ -16,12 +18,14 @@ const validate = (state: any): FormError[] => {
 }
 
 async function onSubmit(event: FormSubmitEvent<any>) {
+  loading.value = true
   const formData = event.data
   const response = await $fetch('/api/mail', {
     method: 'POST',
     body: formData
   })
   info.value = response
+  loading.value = false
 }
 </script>
 
@@ -34,15 +38,18 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       <div class="order-last md:order-first">
         <UForm :validate="validate" :state="state" @submit="onSubmit">
           <Transition name="bounce" mode="out-in">
-            <div v-if="!info">
-              <UFormGroup class="h-56" label="" name="text">
+            <div v-if="!info" class="h-64">
+              <UFormGroup label="" name="text">
                 <UTextarea v-model="state.text" placeholder="...feel free to send me a message" :rows="10" />
+              </UFormGroup>
+              <UFormGroup class="mt-2" name="email">
+                <UInput v-model="state.email" class="" placeholder="...email adress for response" />
               </UFormGroup>
               <UFormGroup class="hidden" label="" name="test">
                 <UTextarea v-model="state.test" placeholder="...feel free to send me a message" :rows="8" />
               </UFormGroup>
             </div>
-            <div v-else class="flex h-56 w-full flex-col items-center justify-center gap-8 rounded bg-[#111827]">
+            <div v-else class="flex h-64 w-full flex-col items-center justify-center gap-8 rounded bg-[#111827]">
               <Icon :name="info === 'success' ? 'pixelarticons:heart' : 'pixelarticons:debug'" class="mx-auto" size="72" color="#e9d5ff" />
               <h4 class="px-12 text-center font-bold text-purple-200">
                 <span v-if="info === 'success'">Thank you for your message</span>
@@ -53,13 +60,14 @@ async function onSubmit(event: FormSubmitEvent<any>) {
           <div class="mt-4 flex justify-end">
             <UButton
               size="md"
-              :disabled="!!info"
-              :class="!info ?? 'opacity-50'"
+              :disabled="!!info || loading"
+              :class="(!!info || loading) ?? 'opacity-20'"
               color="black"
-              class="button flex w-full justify-center rounded-none px-8 font-bold sm:w-auto"
+              class="button flex w-full justify-center rounded-none px-8 font-bold sm:w-28"
               type="submit"
             >
-              Submit
+              <span v-if="!loading">Submit</span>
+              <span v-else><Icon name="svg-spinners:wind-toy" /></span>
             </UButton>
           </div>
         </UForm>
