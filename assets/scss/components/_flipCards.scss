@@ -2,7 +2,7 @@
   .flip {
     @apply h-48 w-48;
     background-color: transparent flex;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px;
     &:hover .inner {
       transform: rotateY(180deg);
     }
@@ -20,7 +20,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
       .front {

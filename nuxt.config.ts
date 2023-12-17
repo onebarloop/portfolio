@@ -14,5 +14,8 @@ export default defineNuxtConfig({
     mailPassword: process.env.NUXT_MAIL_PASSWORD,
     mailUser: process.env.NUXT_MAIL_USER,
     mailRecipient: process.env.NUXT_MAIL_RECIPIENT
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
   }
 })
