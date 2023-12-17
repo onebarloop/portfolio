@@ -8,7 +8,7 @@ async function mail(text: string) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: mailUser,
-      pass: ''
+      pass: mailPassword
     }
   })
 
