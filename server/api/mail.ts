@@ -25,9 +25,8 @@ async function mail(text: string, mail: string = 'Keine Angabe') {
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
-  console.log(body)
   try {
-    await mail(body.text, body.mail)
+    await mail(body.text, body.email)
     return 'success'
   } catch (error) {
     return 'error'
