@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     mailRecipient: process.env.NUXT_MAIL_RECIPIENT
   },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      title: 'My Portfolio Site',
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
   }
 })
