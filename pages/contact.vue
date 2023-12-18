@@ -20,11 +20,15 @@ const validate = (state: any): FormError[] => {
 async function onSubmit(event: FormSubmitEvent<any>) {
   loading.value = true
   const formData = event.data
-  const response = await $fetch('/api/mail', {
-    method: 'POST',
-    body: formData
-  })
-  info.value = response
+  try {
+    const response = await $fetch('/api/mail', {
+      method: 'POST',
+      body: formData
+    })
+    info.value = response
+  } catch {
+    info.value = 'error'
+  }
   loading.value = false
 }
 </script>

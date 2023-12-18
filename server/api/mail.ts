@@ -29,6 +29,7 @@ export default defineEventHandler(async (event) => {
     await mail(body.text, body.email)
     return 'success'
   } catch (error) {
+    setResponseStatus(event, 500)
     return 'error'
   }
 })
