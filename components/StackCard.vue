@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="flip">
     <div class="inner bg-white">
-      <img class="front p-4" :src="logo" />
+      <img class="front p-4" :src="logo" :alt="`${name} Icon`" />
       <div class="back flex flex-col gap-2 p-4">
         <span class="font-black">{{ name }}</span>
         <span>{{ text }}</span>
