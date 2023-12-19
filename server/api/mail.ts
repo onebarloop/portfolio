@@ -1,5 +1,12 @@
 import { createTransport } from 'nodemailer'
+import { ref } from 'vue'
+
 const { mailHost, mailUser, mailPassword, mailRecipient } = useRuntimeConfig()
+const counter = ref(0)
+
+setInterval(() => {
+  counter.value = 0
+}, 1000000)
 
 async function mail(text: string, mail: string = 'Keine Angabe') {
   const transporter = createTransport({
@@ -24,12 +31,22 @@ async function mail(text: string, mail: string = 'Keine Angabe') {
 }
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
-  try {
-    await mail(body.text, body.email)
-    return 'success'
-  } catch (error) {
-    setResponseStatus(event, 500)
-    return 'error'
+  counter.value += 1
+  if (counter.value > 10) {
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'oops'
+    })
+  } else {
+    const body = await readBody(event)
+    try {
+      await mail(body.text, body.email)
+      return 'success'
+    } catch (error) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: 'servererror'
+      })
+    }
   }
 })

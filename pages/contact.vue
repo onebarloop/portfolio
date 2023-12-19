@@ -1,13 +1,32 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
-const info: Ref<'success' | 'error' | null> = ref(null)
+const info: Ref<'success' | 'servererror' | 'oops' | null> = ref(null)
 const loading: Ref<boolean> = ref(false)
 
 const state = reactive({
   text: undefined,
   email: undefined,
   test: undefined
+})
+
+const feedback = computed(() => {
+  if (info.value === 'success') {
+    return {
+      icon: 'pixelarticons:heart',
+      text: 'Thank you for your message'
+    }
+  } else if (info.value === 'servererror') {
+    return {
+      icon: 'pixelarticons:debug',
+      text: 'That did not work out :('
+    }
+  } else if (info.value === 'oops') {
+    return {
+      icon: 'pixelarticons:hidden',
+      text: 'Too many messages'
+    }
+  }
 })
 
 const validate = (state: any): FormError[] => {
@@ -25,9 +44,10 @@ async function onSubmit(event: FormSubmitEvent<any>) {
       method: 'POST',
       body: formData
     })
-    info.value = response
-  } catch {
-    info.value = 'error'
+    info.value = response as 'success'
+  } catch (error: any) {
+    console.log(error.statusMessage)
+    info.value = error.statusMessage
   }
   loading.value = false
 }
@@ -53,11 +73,10 @@ async function onSubmit(event: FormSubmitEvent<any>) {
                 <UTextarea v-model="state.test" placeholder="...feel free to send me a message" :rows="8" />
               </UFormGroup>
             </div>
-            <div v-else class="flex h-64 w-full flex-col items-center justify-center gap-8 rounded bg-[#111827]">
-              <Icon :name="info === 'success' ? 'pixelarticons:heart' : 'pixelarticons:debug'" class="mx-auto" size="72" color="#e9d5ff" />
+            <div v-else-if="feedback" class="flex h-64 w-full flex-col items-center justify-center gap-8 rounded bg-[#111827]">
+              <Icon :name="feedback.icon" class="mx-auto" size="72" color="#e9d5ff" />
               <h4 class="px-12 text-center font-bold text-purple-200">
-                <span v-if="info === 'success'">Thank you for your message</span>
-                <span v-else>Sorry, something went wrong. Please try again later</span>
+                <span>{{ feedback.text }}</span>
               </h4>
             </div>
           </Transition>
