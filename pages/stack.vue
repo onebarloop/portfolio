@@ -12,7 +12,7 @@ import { techStack } from '../config'
       </p>
     </div>
     <div class="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <StackCard v-for="tech in techStack" :key="tech.id" :logo="tech.logo" :text="tech.text" :name="tech.name" :link="tech.link" />
+      <StackCard v-for="tech in techStack" :key="tech.id" :tech="tech" />
     </div>
   </section>
 </template>

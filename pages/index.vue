@@ -55,19 +55,19 @@ onMounted(() => {
       <div class="hidden grid-cols-2 gap-12 sm:grid">
         <div class="flex flex-col gap-24">
           <div v-for="point in arrayL" :key="point.id">
-            <VitaCard :date="point.date" :animation="'animation-left'" :text="point.text" />
+            <VitaCard :data="point" :animation="'animation-left'" />
           </div>
         </div>
         <div class="flex flex-col gap-24 pt-24">
           <div v-for="point in arrayR" :key="point.id">
-            <VitaCard :date="point.date" :animation="'animation-right'" :text="point.text" />
+            <VitaCard :data="point" :animation="'animation-right'" />
           </div>
         </div>
       </div>
       <div class="flex flex-col gap-24 sm:hidden">
         <div v-for="(point, index) in vita" :key="point.id">
-          <VitaCard v-if="index % 2" :date="point.date" :animation="'animation-left'" :text="point.text" />
-          <VitaCard v-else :date="point.date" :animation="'animation-right'" :text="point.text" />
+          <VitaCard v-if="index % 2" :data="point" :animation="'animation-left'" />
+          <VitaCard v-else :data="point" :animation="'animation-right'" />
         </div>
       </div>
     </div>
