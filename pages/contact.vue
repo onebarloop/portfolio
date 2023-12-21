@@ -96,11 +96,11 @@ async function onSubmit(event: FormSubmitEvent<any>) {
         </UForm>
       </div>
       <div class="flex flex-col gap-4">
-        <a href="https://github.com/onebarloop" class="card flex flex-row gap-6 bg-fuchsia-200 hover:bg-fuchsia-300">
+        <a href="https://github.com/onebarloop" class="shimmer-purple card flex flex-row gap-6 bg-fuchsia-200">
           <Icon class="h-12 w-12" name="i-raphael-github" dynamic />
           <div>github.com</div>
         </a>
-        <a href="https://www.linkedin.com/in/alexander-bayer-21a59725b/" class="card flex flex-row gap-6 bg-yellow-200 hover:bg-yellow-300">
+        <a href="https://www.linkedin.com/in/alexander-bayer-21a59725b/" class="shimmer-yellow card flex flex-row gap-6 bg-yellow-200">
           <Icon class="h-12 w-12" name="i-raphael-linkedin" dynamic />
           <div>linkedin.com</div>
         </a>

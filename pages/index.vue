@@ -43,9 +43,9 @@ onMounted(() => {
 <template>
   <section class="bg-purple-200 p-4 pt-12 sm:p-12">
     <div class="flex flex-col gap-12">
-      <div class="card flex flex-row gap-12 self-start bg-white">
+      <div class="card flex flex-row gap-6 self-start bg-white lg:gap-12">
         <p>
-          <span class="font-black">Hey there </span>👋 <br />
+          <span class="text-lg font-black">Hey there</span> 👋<br />
           Welcome to my Website
         </p>
         <div class="shade-small h-36 w-36 shrink-0">
