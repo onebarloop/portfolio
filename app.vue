@@ -20,7 +20,7 @@ import { pages } from './config'
       </div>
     </header>
     <div class="border-4 border-t-0 border-black">
-      <NuxtPage class="shade custom-scrollbar h-dvh overflow-x-hidden overflow-y-scroll sm:h-[85vh]" />
+      <NuxtPage class="shade custom-scrollbar h-[calc(100dvh-100px)] overflow-x-hidden overflow-y-scroll" />
     </div>
   </div>
 </template>
