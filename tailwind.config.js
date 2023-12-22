@@ -5,6 +5,9 @@ export default {
     extend: {
       backgroundImage: {
         dots: "url('~/assets/img/dot-pattern.png')"
+      },
+      backdropBlur: {
+        xs: '2px'
       }
     }
   },

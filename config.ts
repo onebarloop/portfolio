@@ -11,11 +11,12 @@ type Vita = {
   icon?: string
 }
 
-const vita = [
+const vita: Vita[] = [
   {
     date: 'since 06/23',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-    id: 1
+    id: 1,
+    icon: 'pixelarticons:building-community'
   },
   {
     date: 'since 07/23',
@@ -26,20 +27,23 @@ const vita = [
   {
     date: 'since 08/23',
     text: 'Lorem ipsum... ',
-    id: 3
+    id: 3,
+    icon: 'pixelarticons:downasaur'
   },
   {
     date: 'since 09/23',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-    id: 4
+    id: 4,
+    icon: 'pixelarticons:coffee-alt'
   },
   { date: 'since 10/23', text: 'Lorem ipsum...', icon: 'pixelarticons:cloud-sun', id: 5 },
   {
     date: 'since 11/23',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-    id: 6
+    id: 6,
+    icon: 'pixelarticons:user'
   },
-  { date: 'since 12/23', text: 'Lorem ipsum...', id: 7 }
+  { date: 'since 12/23', text: 'Lorem ipsum...', id: 7, icon: 'pixelarticons:zap' }
 ]
 
 type TechStack = {
@@ -60,7 +64,8 @@ const techStack: TechStack[] = [
   { logo: '/img/logos/ts.svg', name: 'TypeScript', text: 'This is the backside', id: 4 },
   { logo: '/img/logos/tailwind.svg', name: 'Tailwind CSS', text: 'This is the backside', id: 5 },
   { logo: '/img/logos/astro.svg', name: 'Astro', text: 'This is the backside', id: 6 },
-  { logo: '/img/logos/symfony.svg', name: 'Symfony', text: 'This is the backside', id: 7 }
+  { logo: '/img/logos/symfony.svg', name: 'Symfony', text: 'This is the backside', id: 7 },
+  { logo: '/img/logos/scss.svg', name: 'Sass', text: 'This is the backside', id: 8 }
 ]
 
 export { pages, vita, techStack, type Vita, type TechStack }
