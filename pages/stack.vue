@@ -6,7 +6,7 @@ import { techStack } from '../config'
   <section class="bg-yellow-200 p-12">
     <div class="card mb-12 bg-white">
       <p>
-        <span class="font-bold">Techstack</span> <br />
+        <span class="text-lg font-black">Techstack</span> <br />
         Those are the technologies I work with on a daily basis. <br />
         Some more, some less, depending on the project.
       </p>

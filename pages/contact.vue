@@ -56,7 +56,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
 <template>
   <section class="bg-green-200 p-12">
     <div class="card mx-auto mb-8 bg-white">
-      <p><span class="font-bold">Contact</span> <br /></p>
+      <p><span class="text-lg font-black">Contact</span> <br /></p>
     </div>
     <div class="grid grid-cols-1 gap-x-24 gap-y-12 md:grid-cols-2">
       <div class="order-last md:order-first">

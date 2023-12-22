@@ -12,7 +12,6 @@ defineProps<{
       <Icon v-if="data.icon" :name="data.icon" class="h-12 w-12" />
       <h3>{{ data.date }}</h3>
     </div>
-    <div class="h-1 w-24 bg-black"></div>
     <div>{{ data.text }}</div>
     <div class="absolute -left-[13px] -top-[13px] h-6 w-6 rotate-45 border-r-4 border-black bg-purple-200 bg-left group-hover:bg-right"></div>
   </div>
