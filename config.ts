@@ -15,49 +15,49 @@ type Vita = {
 const vita: Vita[] = [
   {
     date: '06/22-06/23',
-    title: 'This is headline #1',
+    title: 'Headline #1',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     id: 1,
-    icon: 'pixelarticons:building-community'
+    icon: 'pixelarticons:briefcase-check'
   },
   {
     date: 'since 07/23',
-    title: 'This is headline #2',
+    title: 'Headline #2',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     id: 2,
     icon: 'pixelarticons:script-text'
   },
   {
     date: 'since 08/23',
-    title: 'This is headline #3',
+    title: 'Headline #3',
     text: 'Lorem ipsum... ',
     id: 3,
     icon: 'pixelarticons:downasaur'
   },
   {
     date: 'since 09/23',
-    title: 'This is headline #4',
+    title: 'Headline #4',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     id: 4,
     icon: 'pixelarticons:coffee-alt'
   },
   {
     date: 'since 10/23',
-    title: 'This is headline #5',
+    title: 'Headline #5',
     text: 'Lorem ipsum...',
     icon: 'pixelarticons:cloud-sun',
     id: 5
   },
   {
     date: 'since 11/23',
-    title: 'This is headline #6',
+    title: 'Headline #6',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     id: 6,
     icon: 'pixelarticons:user'
   },
   {
     date: 'since 12/23',
-    title: 'This is headline #7',
+    title: 'Headline #7',
     text: 'Lorem ipsum...',
     id: 7,
     icon: 'pixelarticons:zap'
