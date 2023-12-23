@@ -1,7 +1,7 @@
 .button {
   @apply shade-small transition-all;
   &:hover {
-    box-shadow: 3.5px 3.5px !important;
+    box-shadow: 3.5px 3.5px;
     @apply translate-y-[1px] duration-75;
   }
 }

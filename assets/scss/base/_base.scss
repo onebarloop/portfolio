@@ -2,4 +2,11 @@
   body {
     @apply overflow-hidden bg-white bg-dots bg-fixed pb-12 text-black;
   }
+
+  // Todo: Change UI-Config
+  input,
+  textarea {
+    background-color: black !important;
+    color: white !important;
+  }
 }
