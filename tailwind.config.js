@@ -2,6 +2,9 @@
 export default {
   content: [],
   theme: {
+    fontFamily: {
+      VT323: ['VT323', 'monospace']
+    },
     extend: {
       backgroundImage: {
         dots: "url('~/assets/img/dot-pattern.png')"
