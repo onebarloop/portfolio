@@ -52,7 +52,7 @@ onMounted(() => {
           <img src="/img/me.jpg" />
         </div>
       </div>
-      <div class="hidden grid-cols-2 gap-12 sm:grid">
+      <div class="hidden grid-cols-2 gap-12 md:grid">
         <div class="flex flex-col gap-24">
           <div v-for="point in arrayL" :key="point.id">
             <VitaCard :data="point" :animation="'animation-left'" />
@@ -64,7 +64,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-12 sm:hidden">
+      <div class="flex flex-col gap-12 md:hidden">
         <div v-for="(point, index) in vita" :key="point.id">
           <VitaCard v-if="index % 2" :data="point" :animation="'animation-left'" />
           <VitaCard v-else :data="point" :animation="'animation-right'" />
