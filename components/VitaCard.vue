@@ -12,7 +12,7 @@ defineProps<{
       <Icon v-if="data.icon" :name="data.icon" class="size-14" />
       <div class="font-VT323">
         <p class="text-[0.9rem] leading-none">{{ data.date }}</p>
-        <h2 class="text-2xl">{{ data.title }}</h2>
+        <h2 class="text-3xl">{{ data.title }}</h2>
       </div>
     </div>
     <p class="">{{ data.text }}</p>
