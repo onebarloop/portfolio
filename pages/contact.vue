@@ -85,8 +85,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
               size="md"
               :disabled="!!info || loading"
               :class="(!!info || loading) ?? 'opacity-20'"
-              color="black"
-              class="button flex w-full justify-center rounded-none px-8 font-bold sm:w-28"
+              class="button flex w-full justify-center rounded-none !bg-white px-8 font-bold sm:w-28"
               type="submit"
             >
               <span v-if="!loading">Submit</span>
