@@ -49,4 +49,32 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+  // @keyframes walk {
+  //   from {
+  //     transform: translateX(0px);
+  //   }
+  //   to {
+  //     transform: translateX(90vw);
+  //   }
+  // }
+
+  // @keyframes wiggle {
+  //   from {
+  //     transform: rotate(-10deg);
+  //   }
+  //   50% {
+  //     transform: rotate(10deg);
+  //   }
+  //   to {
+  //     transform: rotate(-10deg);
+  //   }
+  // }
+
+  // .wiggle {
+  //   animation: wiggle 1s 1s linear infinite;
+  // }
+  // .walk {
+  //   animation: walk 15s 1s alternate linear infinite;
+  // }
 }
