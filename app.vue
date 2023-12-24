@@ -20,8 +20,7 @@ import { pages } from './config'
       </div>
     </header>
     <div class="border-4 border-t-0 border-black">
-      <!-- prettier-ignore -->
-      <NuxtPage class="shadow-big custom-scrollbar h-[80dvh] overflow-x-hidden overflow-y-scroll pb-12 md:h-[85dvh]" />
+      <NuxtPage class="custom-scrollbar h-[80dvh] overflow-x-hidden overflow-y-scroll pb-12 shadow-big md:h-[85dvh]" />
     </div>
   </div>
 </template>

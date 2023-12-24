@@ -31,7 +31,7 @@ const feedback = computed(() => {
 
 const validate = (state: any): FormError[] => {
   const errors = []
-  if (!state.text) errors.push({ path: 'text', message: 'Required' })
+  if (!state.text) errors.push({ path: 'text', message: 'Please enter a message' })
   if (state.test) errors.push({ path: 'test', message: 'Forbidden' })
   return errors
 }
