@@ -1,0 +1,22 @@
+@layer utilities {
+  @keyframes shimmer {
+    to {
+      background-position-x: 0%;
+    }
+  }
+  .shimmer {
+    &.yellow {
+      background: linear-gradient(-45deg, rgb(254 240 138) 40%, #fafafa 50%, rgb(254 240 138) 60%);
+      background-size: 300%;
+      background-position-x: 100%;
+    }
+    &.purple {
+      background: linear-gradient(-45deg, rgb(245 208 254) 40%, #fafafa 50%, rgb(245 208 254) 60%);
+      background-size: 300%;
+      background-position-x: 100%;
+    }
+    &:hover {
+      animation: shimmer 1s linear;
+    }
+  }
+}

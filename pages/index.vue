@@ -48,7 +48,8 @@ onMounted(() => {
           <span class="text-lg font-black">Hey there</span> 👋<br />
           Welcome to my Website
         </p>
-        <div class="shade-small h-36 w-36 shrink-0">
+        <!-- prettier-ignore -->
+        <div class="shadow-small h-36 w-36 shrink-0">
           <img src="/img/me.jpg" />
         </div>
       </div>

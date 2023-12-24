@@ -1,6 +1,6 @@
 @layer components {
   .card {
-    @apply shade-small inline-flex items-center border-4 border-black p-4;
+    @apply shadow-small inline-flex items-center border-4 border-black p-4;
 
     &.vita {
       @apply lg:hover:-translate-y-1 lg:hover:scale-110;
