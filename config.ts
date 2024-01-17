@@ -10,6 +10,10 @@ type Vita = {
   text: string
   id: number
   icon?: string
+  link?: {
+    text: string
+    href: string
+  }
 }
 
 const vita: Vita[] = [
@@ -18,7 +22,11 @@ const vita: Vita[] = [
     title: 'Headline #1',
     text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     id: 1,
-    icon: 'pixelarticons:briefcase-check'
+    icon: 'pixelarticons:briefcase-check',
+    link: {
+      text: 'This is a link',
+      href: '#'
+    }
   },
   {
     date: 'since 07/23',
@@ -32,7 +40,11 @@ const vita: Vita[] = [
     title: 'Headline #3',
     text: 'Lorem ipsum... ',
     id: 3,
-    icon: 'pixelarticons:downasaur'
+    icon: 'pixelarticons:downasaur',
+    link: {
+      text: 'This is also a link',
+      href: '/stack'
+    }
   },
   {
     date: 'since 09/23',
