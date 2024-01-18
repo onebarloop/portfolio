@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ['./config.ts'],
   theme: {
     fontFamily: {
       VT323: ['VT323', 'monospace']

@@ -15,7 +15,8 @@ defineProps<{
         <h2 class="text-3xl">{{ data.title }}</h2>
       </div>
     </div>
-    <p class="">{{ data.text }}</p>
+    <!-- <p class="">{{ data.text }}</p> -->
+    <div v-html="data.text"></div>
     <div v-if="data.link" class="mt-2 flex w-full justify-end">
       <a :href="data.link.href" class="flex items-center text-lg font-bold hover:text-purple-500">{{ data.link.text }}</a>
     </div>
