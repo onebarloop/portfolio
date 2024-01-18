@@ -38,11 +38,11 @@ const vita: Vita[] = [
   {
     date: 'since 08/23',
     title: 'Headline #3',
-    text: 'Lorem ipsum... ',
+    text: '<p>Cards now support <span class="text-2xl text-red-300">HTML</span> and <span class="text-3xl font-black text-blue-400">tailwind classes</span></p>',
     id: 3,
     icon: 'pixelarticons:downasaur',
     link: {
-      text: 'This is also a link',
+      text: 'Another Link',
       href: '/stack'
     }
   },
