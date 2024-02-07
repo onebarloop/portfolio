@@ -80,7 +80,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
               </h4>
             </div>
           </Transition>
-          <div class="mt-4 flex justify-end">
+          <div class="mt-8 flex justify-end">
             <UButton
               size="md"
               :disabled="!!info || loading"
@@ -88,7 +88,7 @@ async function onSubmit(event: FormSubmitEvent<any>) {
               class="button flex w-full justify-center rounded-none !bg-white px-8 font-bold !text-black sm:w-28"
               type="submit"
             >
-              <span v-if="!loading">Submit</span>
+              <span v-if="!loading">SEND</span>
               <span v-else><Icon name="svg-spinners:wind-toy" /></span>
             </UButton>
           </div>
